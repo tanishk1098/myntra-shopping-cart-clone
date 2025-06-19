@@ -1,7 +1,7 @@
 const CONVENIENCE_FEES=99;
 let bagItemObjects;
 
-onload();//calling onload fxn
+onload();
 
 function onload(){
 loadBagItemsObjects();
@@ -33,21 +33,19 @@ let finalPayment=totalMRP-totalDiscount+CONVENIENCE_FEES;
 bagSummaryElement.innerHTML=generateSummaryHTML(totalItems,totalDiscount,totalMRP,finalPayment);
 }
 
-function loadBagItemsObjects(){//this fxn converting ,bascially returning actual items through mapping by itemIds
-console.log(bagItems);//bagItems is an array of itemIds
+function loadBagItemsObjects(){
+console.log(bagItems);
  bagItemObjects=bagItems.map(itemId =>{ 
 for(let i =0;i<items.length;i++){
   if(itemId==items[i].id)return items[i];}
 })
-console.log(bagItemObjects);//bagItemObjects is an arr of item objects(can check console for results
+console.log(bagItemObjects);
 
 }
  
 
 function displayBagItems(){
-  // console.log(bagItems);//this gave us only ids of the items, but we need actual items->so we iterate whole array 'items' from items.js ,
-  //  so if id matches we obtain that item from items.js
-//WE CONVERT "bagItems" ID to Actual objects
+ 
   let containerElement=document.querySelector('.bag-items-container');
   let innerHTML='';
 bagItemObjects.forEach(item => {
@@ -58,17 +56,14 @@ bagItemObjects.forEach(item => {
  };
 
 function removeFromBag(itemId){
-// bagItems= bagItems.filter(bagItemId => bagItemId!= itemId);//it constructs a new array consisting of all Ids that are not equal to ItemId
-//WE ARE NOT USING ABOVE line with use of .filter BCZ IF 4 SIMILAR ITEMS ARE IN CART , THEN BY PRESSING'X' FOR 1 ITEM REMOES ALL 4 ITEMS AS THEY HAVE SAME ID
-  const indexToRemove = bagItems.indexOf(itemId); // find particular ndex to be removed
+
+  const indexToRemove = bagItems.indexOf(itemId); 
   if (indexToRemove !== -1) {
-    bagItems.splice(indexToRemove, 1); // remove just one item
+    bagItems.splice(indexToRemove, 1);
   }
-  //now storing into local storage so that our page survives refresh
 localStorage.setItem('bagItems',JSON.stringify(bagItems));
-//now call back these 2 fxns again
 loadBagItemsObjects();
-displayBagIcon();//upadates bag count
+displayBagIcon();
 displayBagItems();
 displayBagSummary();
 
