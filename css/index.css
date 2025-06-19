@@ -114,7 +114,31 @@ flex-direction: column;
 
 }
 
-/*MID SECTION: from JS project*/
+/*MID SECTION: from CS PROJECT*/
+
+.banner_container {
+    margin: 40px 0;
+}
+.banner_image{
+    width: 100%;
+
+}
+.category_heading {
+    text-transform: uppercase;
+    color: #3e4152;
+    letter-spacing: .15em;
+    font-size: 1.8em;
+    margin: 50px 0 10px 30px;
+    max-height: 5em;
+    font-weight: 700;
+}
+.category_items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/*MAIN SECTION FOR JS PROJECT*/
 .items-container{
    display: grid;
   grid-template-columns: repeat(4, 1fr); /* ⬅️ Force 4 items per row */
