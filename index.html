@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--IN THIS MYNTRA PROJECT :items.js,bag.html and bag.css were already defined given by sir--> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Clone</title>
+    <link rel="stylesheet" href="css/index.css">
+    <!--this below link is for symbol(icon) and this link has to be added only ONCE inside html head tag-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+</head>
+<body><!--dividing in 3 parts: header,main and footer-->
+<header><!--DONE IN CSS PROJECT-->
+<div class="logo_container">
+    <a href="#"><img class="myntra_home"src="images/11.png"></a>
+</div>
+<nav class="nav_bar">
+<a href="#">Men</a>
+<a href="#">Women</a>
+<a href="#">Child</a>
+<a href="#">Home & Living</a>
+<a href="#">Beauty</a>
+<a href="#">Studio<sup>New</sup></a>
+</nav >
+
+<div class="search_bar">
+    <!--this span class is for symbol(icon) and is copied from google fonts-->
+<!--here class name is search_icon-->
+    <span class="material-symbols-outlined search_icon">search</span>
+  
+
+<input class="search_input"type="text" placeholder="Search for products brands and more">
+</div>
+
+<div class="action_bar">
+<!--each icon has a seperated class "action_container"-->
+<a class="action_container">
+<span class="material-symbols-outlined">person</span> <!--this is added from google fonts-->
+<span class="action_name">Profile</span><!--this is added by us as we need to write profile-->
+</a>
+
+<a class="action_container">
+<span class="material-symbols-outlined">favorite</span>
+<span class="action_name">Wishlist</span>
+</a>
+
+<a class="action_container" href="pages/bag.html">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="action_name">Bag</span>
+<span class="bag-item-count">0</span><!--this element will be linked  by js to increment count of bag-->
+</a>;
+
+</div>
+</header>
+<!--span used for inline level display of elements --> 
+<!--div used for block-level display of elements -->
+<hr>
+
+
+/<!--MAIN CLASS-->
+<main><!--DOING IN JS PROJECT  , note that we will just write html for 1 element here, having class item-container and use this inside JS to display other items-->
+<div class="items-container">
+    <!--we use query selector on items-container class and a forEach loop on item-container class to print all items-->
+</div>
+</main>
+
+
+
+
+<footer><!--DONE IN CSS PROJECT-->
+<div class="footer_container">
+<div class="footer_column">
+    <h3>ONLINE SHOPPING</h3>
+   <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+
+</div>
+<div class="footer_column">
+<h3>ONLINE SHOPPING</h3>
+<a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+
+</div>
+<div class="footer_column">
+<h3>ONLINE SHOPPING</h3>
+<a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Kids</a>
+                <a href="#">Home & Living</a>
+                <a href="#">Beauty</a>
+                <a href="#">Gift Card</a>
+                <a href="#">Myntra Insider</a>
+</div>
+</div>
+<hr>
+
+<div class="copyright">
+            © 2023 www.myntra.com. All rights reserved.
+        </div>
+</footer>
+<script src="data/items.js"></script><!--linking the html file to items.js file where items array is present-->
+<script src="scripts/index.js"></script><!--linking html file to our main js file-->
+
+
+</body>
+</html>
