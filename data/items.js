@@ -1,5 +1,4 @@
-const items = [//this is an array of objects and it contains info of each item
-    //we will access these items of array through forEach loop
+const items = [
     {
         id: '001',
         image: 'images/1.jpg',
@@ -27,7 +26,7 @@ const items = [//this is an array of objects and it contains info of each item
         delivery_date: '10 Oct 2023',
         rating: {
             stars: 4.3,
-            count: 24,
+            count: 240,
         },
     },
     {
@@ -41,7 +40,7 @@ const items = [//this is an array of objects and it contains info of each item
         return_period: 14,
         delivery_date: '10 Oct 2023',
         rating: {
-            stars: 4.1,
+            stars: 4.7,
             count: 249,
         },
     },
@@ -86,8 +85,8 @@ const items = [//this is an array of objects and it contains info of each item
         return_period: 14,
         delivery_date: '10 Oct 2023',
         rating: {
-            stars: 0,
-            count: 0,
+            stars: 4.4,
+            count: 4750,
         },
     },
     {
@@ -101,7 +100,7 @@ const items = [//this is an array of objects and it contains info of each item
         delivery_date: '10 Oct 2023',
         discount_percentage: 60,
         rating: {
-            stars: 4.2,
+            stars: 4.1,
             count: 388,
         },
     },
